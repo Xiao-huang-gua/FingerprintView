@@ -47,7 +47,7 @@
         accountLabel.backgroundColor = [UIColor clearColor];
         accountLabel.textAlignment = NSTextAlignmentCenter;
         accountLabel.textColor = TitleColor;
-        accountLabel.text = [NSString stringWithFormat:@"%@用户",@"综合办公"];
+        accountLabel.text = [NSString stringWithFormat:@"%@用户",account];
         [accountLabel sizeToFit];
         self.accountLabel = accountLabel;
         [self addSubview:accountLabel];
@@ -67,6 +67,7 @@
         [self addSubview:detailLabel];
         
         UIButton *accountLoginButton = [[UIButton alloc] init];
+        [accountLoginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [accountLoginButton setTitle:@"切换其它登录方式" forState:UIControlStateNormal];
         [accountLoginButton addTarget:self action:@selector(clickedButton:) forControlEvents:UIControlEventTouchUpInside];
         self.accountLoginButton = accountLoginButton;
